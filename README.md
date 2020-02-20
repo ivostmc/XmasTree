@@ -1,5 +1,12 @@
 # XmasTree
 
+In order to run this application:
+1. Install Angular CLI on your PC.
+2. Download the project from github.
+3. Open project in cmd and perform command npm install.
+4. Enter command ng serve.
+5. Open browser on http://localhost:4200/.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server
