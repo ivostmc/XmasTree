@@ -1,0 +1,14 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    width: 50%;
+    height: 150px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.input > div {
+    display: flex;
+    justify-content: space-between;
+}

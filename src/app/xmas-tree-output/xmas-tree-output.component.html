@@ -1,0 +1,22 @@
+<div class="outputWrapper">
+  <div class="output">
+    <br>
+    <div *ngIf="header">
+      <p> {{ header }}</p>
+      <br>
+    </div>
+    <div class="treeContainer">
+      <div *ngFor="let row of rowsList; let i=index;" [class]="(i == 0) ? 'treeRow yellow' : 'treeRow green'">
+        <div *ngFor="let star of row" class="treeElement"><span>{{ star }}</span></div>
+      </div>
+      <div class="treeRow">
+        <div class="treeElement brown"><span>*</span></div>
+      </div>
+    </div>
+    <br>
+    <div *ngIf="footer">
+      <p>{{ footer }}</p>
+      <br>
+    </div>
+  </div>
+</div>

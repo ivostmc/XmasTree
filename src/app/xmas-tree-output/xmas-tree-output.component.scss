@@ -1,0 +1,38 @@
+.treeElement {
+    font-size: 30px;
+    text-align: center;;
+    width: 40px;
+    height: 40px;
+}
+.treeElement span {
+    display: inline-block;
+    margin-top: 8px;
+  }
+  .outputWrapper {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+  }
+
+  .output {
+      display: inline-block;
+      margin-top: 30px;
+      border: 1px solid cornflowerblue;
+      p {
+          padding-left: 10px;
+      }
+  }
+  .treeRow{
+      display: flex;
+      justify-content: center;
+  }
+
+  .brown {
+      color: brown;
+  }
+  .yellow {
+      color: yellow;
+  }
+  .green {
+      color: green;
+  }

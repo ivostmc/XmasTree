@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { XmasTree } from './xmas-tree';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'xmas-tree';
+  rows: number;
+  header: string;
+  footer: string;
+
+  public showTree(xmasTree: XmasTree){
+    this.rows = xmasTree.rows;
+    this.header = xmasTree.header;
+    this.footer = xmasTree.footer;
+  }   
 }
