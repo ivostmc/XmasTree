@@ -7,13 +7,9 @@ import { XmasTree } from './xmas-tree';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  rows: number;
-  header: string;
-  footer: string;
+  xTree: XmasTree;
 
   public showTree(xmasTree: XmasTree){
-    this.rows = xmasTree.rows;
-    this.header = xmasTree.header;
-    this.footer = xmasTree.footer;
+      this.xTree = new XmasTree(xmasTree.rows, xmasTree.header, xmasTree.footer);
   }   
 }

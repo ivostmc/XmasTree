@@ -2,17 +2,19 @@
     <form (ngSubmit)="onSubmit()" #XmasTreeForm="ngForm">
         <div class="form-group">
             <label for="rows">Row count:</label>
-            <input type="number" class="from-control" [min]="4" customMin="4" [max]="15" customMax="15" [(ngModel)]="model.rows" id="rows"
-                name='rows' #rows="ngModel" required >
-            <div *ngIf="rows.invalid" class="alert alert-danger">Required number between 4 and 15!</div>
+            <input type="number" class="form-control" name="rows" #rows="ngModel" [(ngModel)]="model.rows"
+             required customMin="4" [class.is-invalid]="rows.invalid && rows.touched" customMax="15"
+             [class.is-valid]="rows.valid && rows.touched">
+             <div *ngIf="rows.invalid && rows.touched" class="invalid-feedback">Required number between 4 and 15!</div>
         </div>
         <div class="form-group">
             <label for="header">Header: </label>
-            <input type="text" class="form-control" [(ngModel)]="model.header" name='header' id="header">
+            <input type="text" class="form-control" name='header' [(ngModel)]="model.header" id="header"
+            maxLength="15">
         </div>
         <div class="form-group">
             <label for="footer">Footer: </label>
-            <input type="text" class="form-control" [(ngModel)]="model.footer" name="footer" id="footer">
+            <input type="text" class="form-control" [(ngModel)]="model.footer" name="footer" id="footer" maxLength="15">
         </div>
         <button type="submit" [disabled]="!XmasTreeForm.form.valid" class="btn btn-success">Generate</button>
     </form>
